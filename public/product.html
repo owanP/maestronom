@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Maestronom</title>
+
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html"><h1 class="logo">Maestronom</h1></a>
+    </header>
+
+    <nav class="topnav">
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="product.html" class="active">Product</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+<!-- Replace your existing filters div with this -->
+<div class="filters">
+    <div class="filter-section">
+        <h3>Categories</h3>
+        <div class="category-buttons">
+            <button class="category-btn active" data-category="">All Products</button>
+            <button class="category-btn" data-category="Drum">Drums</button>
+            <button class="category-btn" data-category="Guitar">Guitars</button>
+        </div>
+    </div>
+    
+    <div class="filter-section">
+        <h3>Sort By</h3>
+        <div class="sort-buttons">
+            <button class="sort-btn active" data-sort-type="all">All</button>
+            <button class="sort-btn" data-sort-type="promo">Promo</button>
+            <button class="sort-btn" data-sort-type="new">New Arrivals</button>
+            <button class="sort-btn" data-sort-type="best">Best Sellers</button>
+        </div>
+    </div>
+</div>
+    <div id="products-container"></div>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Maestronom. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="product.js"></script>
+</body>
+</html>
