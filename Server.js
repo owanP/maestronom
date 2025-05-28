@@ -42,13 +42,6 @@ app.get('/api/products', (req, res) => {
   });
 });
 
-app.get('/api/products/:id', (req, res) => {
-    db.query('SELECT * FROM product WHERE id = ?', [req.params.id], (err, results) => {
-        if (err) return res.status(500).json({ error: 'Database error' });
-        res.json(results[0] || {});
-    });
-});
-
 // HTML Routes
 
 // Add this new API route before the HTML routes
