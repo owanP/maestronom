@@ -44,7 +44,6 @@ app.get('/api/products', (req, res) => {
 
 // HTML Routes
 
-// Add this new API route before the HTML routes
 app.get('/api/products', (req, res) => {
     let sql = 'SELECT * FROM product';
     const conditions = [];
@@ -74,7 +73,7 @@ app.get('/api/products', (req, res) => {
         if (err) return res.status(500).json({ error: 'Database error' });
         res.json(results);
 
-    // Both filters are applied simultaneously
+
     conditions.push(`category = '${req.query.category}'`);
     conditions.push(`selling_type = '${req.query.selling_type}'`);
     });
